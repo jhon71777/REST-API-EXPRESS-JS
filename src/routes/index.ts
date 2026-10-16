@@ -1,0 +1,15 @@
+import { Router } from 'express';
+import loanRoutes from './loan.routes';
+import userRoutes from './user.routes';
+import ambienteRoutes from './ambiente.routes';
+import equipoRoutes from './equipo.routes';
+import novedadRoutes from './novedad.routes'; 
+import dashboardRoutes from './dashboard.routes';       
+const router = Router();
+router.use('/loans', loanRoutes);
+router.use('/users', userRoutes);
+router.use('/ambientes', ambienteRoutes);
+router.use('/equipos', equipoRoutes);
+router.use('/novedades', novedadRoutes);  
+router.use('/dashboard', dashboardRoutes);            
+export default router;
